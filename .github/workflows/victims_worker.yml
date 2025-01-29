@@ -40,6 +40,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Python script
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
           python src/victims_worker.py
 
