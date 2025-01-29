@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout dbfs branch
         uses: actions/checkout@v2
         with:
           ref: dbfs
@@ -45,14 +45,14 @@ jobs:
         run: |
           python src/victims_worker.py
 
-      - name: Checkout code
+      - name: Checkout dbfs branch
         uses: actions/checkout@v2
         with:
           ref: dbfs
 
       - name: Copy dbfs from ./data to .
         run: |
-          mv /tmp/data/* .
+          mv ./data/* .
 
       - name: Commit and push changes
         run: |
