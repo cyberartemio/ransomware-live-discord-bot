@@ -45,14 +45,14 @@ jobs:
         run: |
           python src/victims_worker.py
 
+      - name: Copy dbfs from ./data to .
+        run: |
+          mv ./data/* .
+
       - name: Checkout dbfs branch
         uses: actions/checkout@v2
         with:
           ref: dbfs
-
-      - name: Copy dbfs from ./data to .
-        run: |
-          mv ./data/* .
 
       - name: Commit and push changes
         run: |
