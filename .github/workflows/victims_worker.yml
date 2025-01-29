@@ -47,17 +47,21 @@ jobs:
 
       - name: Copy dbfs from ./data to .
         run: |
-          mv ./data/* .
+          mv ./data /tmp/
 
       - name: Checkout dbfs branch
         uses: actions/checkout@v2
         with:
           ref: dbfs
 
+      - name: Copy dbfs data from /tmp/data to .
+        run: |
+          mv /tmp/data/* .
+
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add notified_victims.txt  # Add all files in the 'data' directory
+          git add notified_victims.txt
           git commit -m "actions_run::Worker - New victims notifier"
           git push origin dbfs
