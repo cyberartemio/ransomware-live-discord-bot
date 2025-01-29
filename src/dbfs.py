@@ -5,13 +5,9 @@ class DbFS:
     DB_FOLDER = "data" # Name of the folder where all the data is stored
     def __init__(self):
         current_file_path = os.path.abspath(__file__)
-        logger.info(current_file_path)
         src_directory = os.path.dirname(current_file_path)
-        logger.info(src_directory)
         root_directory = os.path.dirname(src_directory)
-        logger.info(root_directory)
         self.folder = os.path.join(root_directory, self.DB_FOLDER)
-        logger.info(self.folder)
 
     def already_notified_victims(self):
         logger.debug("Loading list of already notified victims from filesystem")
