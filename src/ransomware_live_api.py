@@ -29,6 +29,6 @@ class RansomwareLiveApi:
                 post_url = victim["post_url"] if "post_url" in victim else "N/A"
                 published = victim["published"] if "published" in victim else None # TODO: parse string as datetime obj
                 screenshot = victim["screenshot"] if "screenshot" in victim else None
-                website = victim["website"] if "website" in victim else "N/A"
+                website = victim["website"] if "website" in victim and victim["website"] != "" else "N/A"
                 recent_victims.append(Victim(activity=activity, country_code=country, description=description, discovered=discovered, group_name=group, name=post_title, group_post_url=post_url, published_date=published, screenshot_url=screenshot, website=website))
         return recent_victims
