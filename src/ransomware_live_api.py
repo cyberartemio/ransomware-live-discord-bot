@@ -26,7 +26,7 @@ class RansomwareLiveApi:
                 discovered = victim["discovered"] if "discovered" in victim else None # TODO: parse string as datetime obj
                 group = victim["group_name"] if "group_name" in victim else "N/A"
                 post_title = victim["post_title"] if "post_title" in victim else "N/A"
-                post_url = victim["post_url"] if "post_url" in victim else "N/A"
+                post_url = victim["post_url"] if "post_url" in victim and victim["post_url"] != "" else "N/A"
                 published = victim["published"] if "published" in victim else None # TODO: parse string as datetime obj
                 screenshot = victim["screenshot"] if "screenshot" in victim else None
                 website = victim["website"] if "website" in victim and victim["website"] != "" else "N/A"
