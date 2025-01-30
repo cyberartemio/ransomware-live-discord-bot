@@ -12,29 +12,29 @@ class Messages:
                     "fields": [
                         {
                             "name": "👔 Name:",
-                            "value": victim.name
+                            "value": f"`{victim.name}`"
                         },
                         {
                             "name": "💼 Sector:",
-                            "value": victim.activity,
+                            "value": f"`{victim.activity}`",
                             "inline": True
                         },
                         {
                             "name": "🌎 Country:",
-                            "value": f"{victim.country} {victim.country_flag}",
+                            "value": f"`{victim.country} {victim.country_flag}`",
                             "inline": True
                         },
                         {
                             "name": "🗂️ Additional data:",
-                            "value": victim.description
+                            "value": f"`{victim.description}`"
                         },
                         {
                             "name": "🖥️ Website:",
-                            "value": victim.website
+                            "value": f"`{victim.website}`"
                         },
                         {
                             "name": "😈 Ransomware gang:",
-                            "value": victim.group_name
+                            "value": f"`{victim.group_name}`"
                         },
                         {
                             "name": "🖥️ Post URL:",
@@ -42,7 +42,7 @@ class Messages:
                         },
                         {
                             "name": "📅 Published date:",
-                            "value": victim.published_date
+                            "value": f"`{victim.published_date}`"
                         }
                     ],
                     "author": {
