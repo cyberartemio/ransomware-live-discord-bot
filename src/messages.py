@@ -4,7 +4,7 @@ class Messages:
         return {
             "content": None,
             "username": "Abigail",
-            "avatar_url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/06590cce-eec1-4e12-98f6-d1bbebfe434a/original=true,quality=90/54334921.jpeg",
+            "avatar_url": "https://raw.githubusercontent.com/cyberartemio/ransomware-live-discord-bot/refs/heads/main/.github/assets/discord-profile-picture.png",
             "embeds": [
                 {
                     "title": "New ransomware attack claimed!",
